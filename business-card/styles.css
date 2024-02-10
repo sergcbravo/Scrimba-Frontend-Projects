@@ -1,0 +1,219 @@
+body {
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 20px;
+    border-bottom: 3px solid #eae2b7;
+    border-right: 3px solid #eae2b7;
+    display: block;
+    transition: transform 0.3s;
+    object-fit: cover;
+    height: auto;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    border-bottom: 3px solid #d62828;
+    border-right: 3px solid #d62828;
+    transition: transform 0.3s;
+    
+}
+
+h3 {
+    position: relative;
+    overflow: hidden;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: tr;
+    transform: translateX(-100%);
+}
+
+/* Add animation to the text */
+@keyframes text-entry {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h3, p, h4 {
+    opacity: 0;
+    animation: text-entry 0.6s ease-in-out forwards;
+    animation-delay: 0.3s;
+    transition: text-shadow 0.3s;
+}
+
+h3:hover, p:hover, h4:hover {
+    text-shadow: 0 0 6px #d62828;
+    transition: text-shadow 0.3s;
+}
+
+p {
+    animation-delay: 0.6s;
+}
+
+h4 {
+    animation-delay: 0.9s;
+}
+
+.avatar:active {
+    transform: rotate(6deg);
+}
+
+.card {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: #eae2b7;
+    background: #003049;
+    color: #f77f00;
+    border-bottom: 9px solid #d62828;
+    border-right: 6px solid #d62828;
+    border-radius: 40px;
+    background: linear-gradient(to bottom border-right, #003049, #002538);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border: bottom 6px solid #d62828;
+    background-clip: padding-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: text-entry 0.3s forwards;
+    animation-delay: 0.3s;
+}
+
+.card:hover {
+    border-color: #f77f00;
+    background-color: #002844;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+        
+    /*
+    Challenge:
+    Find a color palette you like on Coolors.co
+    and use it in your business card.
+     */
+
+.border-blue {
+    border: 1px dotted blue;
+}
+
+/*social icons*/
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.social-icon {
+    color: #eae2b7;
+    font-size: 1.5em;
+    opacity: 0.7;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #d62828;
+    transition: color 0.3s ease;
+    opacity: 1;
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    .card {
+        transform: scale(0.9);
+        transform-origin: top center;
+        width: auto;
+        flex-direction: row;
+        padding: 10px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        height: auto;
+    }
+
+    .avatar {
+        width: 100px;
+
+    }
+
+    h3, p, h4 {
+        font-size: 80%;
+    }    
+
+    .social-media-icon {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width: 601px){
+    body {
+        margin: 10px;
+    }
+
+    .card {
+        transform: scale(0.9);
+        transform-origin: top center;
+        width: auto;
+        flex-direction: row;
+        padding: 10px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        object-fit: cover;
+        height: auto;
+    }
+
+    .avatar {
+        width: 100px;
+
+    }
+
+    h3, p, h4 {
+        font-size: 80%;
+    }    
+
+    .social-media-icon {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+}
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
