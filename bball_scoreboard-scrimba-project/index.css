@@ -47,7 +47,7 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: dotted 2px #fcbf49;
+    border: solid 2px #fcbf49;
     width: 155px;
     height: 120px;
 }
