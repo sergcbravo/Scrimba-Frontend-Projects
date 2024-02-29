@@ -19,6 +19,17 @@ body {
     background-color: #003049;
 }
 
+#home-side-container, #away-side-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: fit-content;
+    margin-bottom: 70px;
+
+}
+
 h3 {
     font-family: Verdana;
     text-align: center;
@@ -55,25 +66,73 @@ h3 {
     padding-top: 20px;
 }
 
-#period-text,
-#shot-clock {
-    font-family: 'Cursed Timer ULil';
+#center-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 155px; /* Adjusted width */
-    height: 65px;
-    font-size: 14px; /* Adjusted font size */
-    color: #fcbf49;
-    margin: 10px 0;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 385px;
 }
 
-#period-number,
-#shot-clock-number {
+#shot-clock-container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    margin: 50px;
+}
+
+#period-container {
+    position: static;
+    width: 85px;
+    height: 85px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+
+#period-number {
+    font-family: 'Cursed Timer ULiL';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 25px;
+    color: #f77f00;
+}
+
+#shot-clock, #period-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding-top: 5px;
+    font-size: 20px;
+    color: #fcbf49;
+}
+
+#shot-clock-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 50px;
+    color: #f77f00;
 }
 
 .add-points-btns {
