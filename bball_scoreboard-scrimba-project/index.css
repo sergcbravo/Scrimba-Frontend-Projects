@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Cursed Timer ULiL';
+    src: url(fonts/CURSEDTIMERULIL-AZNM.TTF);
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    font-family: 'Cursed Timer ULiL';
+    display: flex;
+    justify-content: space-evenly; /* Adjusted spacing */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    width: 575px;
+    height: 385px;
+    margin: 20px auto;
+    background-color: #003049;
+}
+
+h3 {
+    font-family: Verdana;
+    text-align: center;
+    color: #fcbf49;
+    font-size: 40px;
+    margin: 0;
+}
+
+.score-home,
+.score-away {
+    margin: 10px; /* Adjusted margin for better spacing */
+    background-color: #01283d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: dotted 2px #fcbf49;
+    width: 155px;
+    height: 120px;
+}
+
+#home-points-text, #away-points-text {
+    font-family: 'Cursed Timer ULiL';
+    font-size: 80px;
+    color: #d62828;
+    width: 117px;
+    height: 120px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#period-text,
+#shot-clock {
+    font-family: 'Cursed Timer ULil';
+    display: flex;
+    flex-direction: column;
+    width: 155px; /* Adjusted width */
+    height: 65px;
+    font-size: 14px; /* Adjusted font size */
+    color: #fcbf49;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#period-number,
+#shot-clock-number {
+    margin: 0;
+    padding-top: 5px;
+}
+
+.add-points-btns {
+    width: 155px;
+    height: 45px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #eae2b7;
+    color: #fcbf49;
+    width: 45px;
+    height: 45px;
+    padding-top: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#btns-text {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    width: 30px;
+    height: 25.77px;
+}
