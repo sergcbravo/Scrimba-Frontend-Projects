@@ -27,7 +27,6 @@ body {
     width: 155px;
     height: fit-content;
     margin-bottom: 70px;
-
 }
 
 h3 {
@@ -40,7 +39,7 @@ h3 {
 
 .score-home,
 .score-away {
-    margin: 10px; /* Adjusted margin for better spacing */
+    margin: 10px;
     background-color: #01283d;
     display: flex;
     flex-direction: column;
@@ -163,4 +162,25 @@ button {
     padding-top: 5px;
     margin: 0;
     cursor: pointer;
+}
+
+.shot-clock-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    box-shadow: 2px 2px 2px 2px #775a22, -2px -2px 2px #775a22;
+}
+
+p {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #eae2b7;
+    margin: 0;
 }
