@@ -10,31 +10,37 @@ document.getElementById('away-points-text').textContent = awayPoints;
 function add1Point() {
   homePoints += 1;
   document.getElementById('home-points-text').textContent = homePoints;
+  scoreLight()
 }
 
 function add2Points() {
   homePoints += 2;
   document.getElementById('home-points-text').textContent = homePoints;
+  scoreLight();
 }
 
 function add3Points() {
   homePoints += 3;
   document.getElementById('home-points-text').textContent = homePoints;
+  scoreLight();
 }
 
 function add1PointAway() {
   awayPoints += 1;
   document.getElementById('away-points-text').textContent = awayPoints;
+  scoreLight();
 }
 
 function add2PointsAway() {
   awayPoints += 2;
   document.getElementById('away-points-text').textContent = awayPoints;
+  scoreLight();
 }
 
 function add3PointsAway() {
   awayPoints += 3;
   document.getElementById('away-points-text').textContent = awayPoints;
+  scoreLight();
 }
 
 function shotClockStart() {
@@ -56,4 +62,19 @@ function shotClockStart() {
       document.getElementById('shot-clock-number').style.color = 'red'; // Change the color to red at 0
     }
   }, 1000);
+}
+
+function scoreLight() {
+  // Reset both teams to the default background first
+  document.querySelector('.js-home-score').style.backgroundColor = '#01283d';
+  document.querySelector('.js-away-score').style.backgroundColor = '#01283d';
+
+  if (homePoints > awayPoints) {
+    document.querySelector('.js-home-score').style.backgroundColor = '#eae2b7';
+  } else if (awayPoints > homePoints) {
+    document.querySelector('.js-away-score').style.backgroundColor = '#eae2b7';
+  } else {
+    document.querySelector('.js-home-score').style.backgroundColor = '#eae2b7';
+    document.querySelector('.js-away-score').style.backgroundColor = '#eae2b7';
+  }
 }

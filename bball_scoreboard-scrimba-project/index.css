@@ -38,7 +38,7 @@ h3 {
 }
 
 .score-home,
-.score-away {
+.score-away, .js-home-score, .js-away-score {
     margin: 10px;
     background-color: #01283d;
     display: flex;
