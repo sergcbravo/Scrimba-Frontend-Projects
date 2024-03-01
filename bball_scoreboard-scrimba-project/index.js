@@ -2,6 +2,7 @@ let homePoints = 0;
 let awayPoints = 0;
 let shotClockIsRunning = false;
 let shotClockTime = 24;
+let shotClockInterval; // Stores interval ID
 
 document.getElementById('home-points-text').textContent = homePoints;
 document.getElementById('away-points-text').textContent = awayPoints;
@@ -37,21 +38,22 @@ function add3PointsAway() {
 }
 
 function shotClockStart() {
-  if(!shotClockIsRunning) {
-    shotClockTime = true;
-    shotClockTime = 24; // Reset to start time
-    document.getElementById('shot-clock-number').textContent = shotClockTime; // Initial display update
-
-    let timerInterval = setInterval(() => {
-      shotClockTime -=1; // Decrement time
-      document.getElementById('shot-clock-number').textContent = shotClockTime; // Update display
-
-      if (shotClockTime <= 0) {
-        clearInterval(timerInterval); // Stop the countdown
-        shotClockIsRunning = false;
-        // Change the color to red
-        document.getElementById('shot-clock-number').style.color = 'red';
-      }
-    }, 1000); // Update every second
+  if(shotClockIsRunning) {
+    clearInterval(shotClockInterval); // Clear the existing interval if the clock is already running
   }
+  shotClockTime = 24;
+  shotClockIsRunning = true;
+  document.getElementById('shot-clock-number').textContent = shotClockTime;
+  document.getElementById('shot-clock-number').style.color = '#f77f00'; // Reset color
+
+  shotClockInterval = setInterval(() => {
+    shotClockTime -= 1;
+    document.getElementById('shot-clock-number').textContent = shotClockTime;
+
+    if (shotClockTime <= 0) {
+      clearInterval(shotClockInterval); // Stop the interval when reaching 0
+      shotClockIsRunning = false; // Update running status
+      document.getElementById('shot-clock-number').style.color = 'red'; // Change the color to red at 0
+    }
+  }, 1000);
 }

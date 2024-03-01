@@ -171,11 +171,20 @@ button {
     align-items: center;
     cursor: pointer;
     margin: 0;
-    box-shadow: 2px 2px 2px 2px #775a22, -2px -2px 2px #775a22;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px #1b1b1b, -2px -2px 2px #3e3d3d;
+    width: 80px;
+    transition: all 0.2 ease;
+}
+
+.shot-clock-btn:active {
+    box-shadow: inset 1px 1px 5px #0e0e0e, inset -1px -1px 5px #3e3d3e;
+    background-color: #025480;
 }
 
 p {
-    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
